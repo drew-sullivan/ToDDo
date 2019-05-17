@@ -8,11 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		C82EC0BE228DCBBE00DD73C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82EC0BD228DCBBE00DD73C6 /* AppDelegate.swift */; };
-		C82EC0C0228DCBBE00DD73C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82EC0BF228DCBBE00DD73C6 /* ViewController.swift */; };
 		C82EC0C3228DCBBE00DD73C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C82EC0C1228DCBBE00DD73C6 /* Main.storyboard */; };
 		C82EC0C5228DCBBF00DD73C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C82EC0C4228DCBBF00DD73C6 /* Assets.xcassets */; };
 		C82EC0C8228DCBBF00DD73C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C82EC0C6228DCBBF00DD73C6 /* LaunchScreen.storyboard */; };
-		C82EC0D3228DCBBF00DD73C6 /* ToDDoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82EC0D2228DCBBF00DD73C6 /* ToDDoTests.swift */; };
+		C82EC0DE228DCDDE00DD73C6 /* ToDoItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82EC0DD228DCDDE00DD73C6 /* ToDoItemTests.swift */; };
+		C82EC0E1228DCE8D00DD73C6 /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82EC0E0228DCE8D00DD73C6 /* ToDoItem.swift */; };
+		C82EC0E3228DD7C000DD73C6 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82EC0E2228DD7C000DD73C6 /* Location.swift */; };
+		C82EC0E6228DDBA100DD73C6 /* LocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82EC0E5228DDBA100DD73C6 /* LocationTests.swift */; };
+		C82EC0E8228DF37A00DD73C6 /* ItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82EC0E7228DF37A00DD73C6 /* ItemManager.swift */; };
+		C82EC0EA228DF39200DD73C6 /* ItemManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82EC0E9228DF39200DD73C6 /* ItemManagerTests.swift */; };
+		C82EC0ED228F31B500DD73C6 /* ItemListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82EC0EC228F31B500DD73C6 /* ItemListViewControllerTests.swift */; };
+		C82EC0EF228F321800DD73C6 /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82EC0EE228F321800DD73C6 /* ItemListViewController.swift */; };
+		C82EC0F3228F366E00DD73C6 /* TableViewDataProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82EC0F2228F366E00DD73C6 /* TableViewDataProviderTests.swift */; };
+		C82EC0F5228F368100DD73C6 /* TableViewDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82EC0F4228F368100DD73C6 /* TableViewDataProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,14 +36,22 @@
 /* Begin PBXFileReference section */
 		C82EC0BA228DCBBE00DD73C6 /* ToDDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C82EC0BD228DCBBE00DD73C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C82EC0BF228DCBBE00DD73C6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C82EC0C2228DCBBE00DD73C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C82EC0C4228DCBBF00DD73C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C82EC0C7228DCBBF00DD73C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C82EC0C9228DCBBF00DD73C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C82EC0CE228DCBBF00DD73C6 /* ToDDoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDDoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C82EC0D2228DCBBF00DD73C6 /* ToDDoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDDoTests.swift; sourceTree = "<group>"; };
 		C82EC0D4228DCBBF00DD73C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C82EC0DD228DCDDE00DD73C6 /* ToDoItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemTests.swift; sourceTree = "<group>"; };
+		C82EC0E0228DCE8D00DD73C6 /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
+		C82EC0E2228DD7C000DD73C6 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		C82EC0E5228DDBA100DD73C6 /* LocationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTests.swift; sourceTree = "<group>"; };
+		C82EC0E7228DF37A00DD73C6 /* ItemManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemManager.swift; sourceTree = "<group>"; };
+		C82EC0E9228DF39200DD73C6 /* ItemManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemManagerTests.swift; sourceTree = "<group>"; };
+		C82EC0EC228F31B500DD73C6 /* ItemListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewControllerTests.swift; sourceTree = "<group>"; };
+		C82EC0EE228F321800DD73C6 /* ItemListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewController.swift; sourceTree = "<group>"; };
+		C82EC0F2228F366E00DD73C6 /* TableViewDataProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataProviderTests.swift; sourceTree = "<group>"; };
+		C82EC0F4228F368100DD73C6 /* TableViewDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +93,14 @@
 		C82EC0BC228DCBBE00DD73C6 /* ToDDo */ = {
 			isa = PBXGroup;
 			children = (
+				C82EC0DF228DCE7B00DD73C6 /* Model */,
 				C82EC0BD228DCBBE00DD73C6 /* AppDelegate.swift */,
-				C82EC0BF228DCBBE00DD73C6 /* ViewController.swift */,
 				C82EC0C1228DCBBE00DD73C6 /* Main.storyboard */,
 				C82EC0C4228DCBBF00DD73C6 /* Assets.xcassets */,
 				C82EC0C6228DCBBF00DD73C6 /* LaunchScreen.storyboard */,
 				C82EC0C9228DCBBF00DD73C6 /* Info.plist */,
+				C82EC0EE228F321800DD73C6 /* ItemListViewController.swift */,
+				C82EC0F4228F368100DD73C6 /* TableViewDataProvider.swift */,
 			);
 			path = ToDDo;
 			sourceTree = "<group>";
@@ -90,10 +108,32 @@
 		C82EC0D1228DCBBF00DD73C6 /* ToDDoTests */ = {
 			isa = PBXGroup;
 			children = (
-				C82EC0D2228DCBBF00DD73C6 /* ToDDoTests.swift */,
 				C82EC0D4228DCBBF00DD73C6 /* Info.plist */,
+				C82EC0EB228DF3B800DD73C6 /* Model */,
+				C82EC0EC228F31B500DD73C6 /* ItemListViewControllerTests.swift */,
+				C82EC0F2228F366E00DD73C6 /* TableViewDataProviderTests.swift */,
 			);
 			path = ToDDoTests;
+			sourceTree = "<group>";
+		};
+		C82EC0DF228DCE7B00DD73C6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C82EC0E0228DCE8D00DD73C6 /* ToDoItem.swift */,
+				C82EC0E2228DD7C000DD73C6 /* Location.swift */,
+				C82EC0E7228DF37A00DD73C6 /* ItemManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C82EC0EB228DF3B800DD73C6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C82EC0DD228DCDDE00DD73C6 /* ToDoItemTests.swift */,
+				C82EC0E5228DDBA100DD73C6 /* LocationTests.swift */,
+				C82EC0E9228DF39200DD73C6 /* ItemManagerTests.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,8 +237,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C82EC0C0228DCBBE00DD73C6 /* ViewController.swift in Sources */,
+				C82EC0E8228DF37A00DD73C6 /* ItemManager.swift in Sources */,
 				C82EC0BE228DCBBE00DD73C6 /* AppDelegate.swift in Sources */,
+				C82EC0F5228F368100DD73C6 /* TableViewDataProvider.swift in Sources */,
+				C82EC0E3228DD7C000DD73C6 /* Location.swift in Sources */,
+				C82EC0E1228DCE8D00DD73C6 /* ToDoItem.swift in Sources */,
+				C82EC0EF228F321800DD73C6 /* ItemListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,7 +250,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C82EC0D3228DCBBF00DD73C6 /* ToDDoTests.swift in Sources */,
+				C82EC0DE228DCDDE00DD73C6 /* ToDoItemTests.swift in Sources */,
+				C82EC0E6228DDBA100DD73C6 /* LocationTests.swift in Sources */,
+				C82EC0EA228DF39200DD73C6 /* ItemManagerTests.swift in Sources */,
+				C82EC0F3228F366E00DD73C6 /* TableViewDataProviderTests.swift in Sources */,
+				C82EC0ED228F31B500DD73C6 /* ItemListViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,8 +408,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MMSJ26GJU7;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ToDDo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -369,6 +418,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.drewsullivandma.ToDDo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -378,8 +428,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MMSJ26GJU7;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ToDDo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -387,6 +438,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.drewsullivandma.ToDDo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
