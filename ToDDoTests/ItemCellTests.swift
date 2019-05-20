@@ -66,7 +66,17 @@ class ItemCellTests: XCTestCase {
         XCTAssertEqual(cell.locationLabel.text, "Latitude: \(String(describing: item.location?.coordinate?.latitude)), Longitude: \(String(describing: item.location?.coordinate?.longitude))")
     }
 
-    func test_
+    func test_whenItemIsChecked_itIsStruckThrough() {
+        let location = Location(name: "Bar")
+        let item = ToDoItem(title: "Foo", itemDescription: nil, itemTimestamp: 1456150025, location: location)
+        cell.configCell(withItem: item, checked: true)
+
+        let attributedString = NSAttributedString(string: "Foo", attributes: [NSAttributedString.Key.strikethroughStyle:NSUnderlineStyle.single.rawValue])
+
+        XCTAssertEqual(cell.titleLabel.attributedText, attributedString)
+        XCTAssertNil(cell.locationLabel.text)
+        XCTAssertNil(cell.dateLabel.text)
+    }
 
 }
 

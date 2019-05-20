@@ -31,16 +31,23 @@ class ItemCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func configCell(withItem item: ToDoItem) {
-        titleLabel.text = item.title
+    func configCell(withItem item: ToDoItem, checked: Bool = false) {
+        if checked {
+            let attributedString = NSAttributedString(string: item.title, attributes: [NSAttributedString.Key.strikethroughStyle:NSUnderlineStyle.single.rawValue])
+            titleLabel.attributedText = attributedString
+            locationLabel.text = nil
+            dateLabel.text = nil
+        } else {
+            titleLabel.text = item.title
 
-        if let timestamp = item.itemTimestamp {
-            let date = Date(timeIntervalSince1970: timestamp)
-            dateLabel.text = dateFormatter.string(from: date)
-        }
+            if let location = item.location {
+                locationLabel.text = "Latitude: \(String(describing: location.coordinate?.latitude)), Longitude: \(String(describing: location.coordinate?.longitude))"
+            }
 
-        if let location = item.location {
-            locationLabel.text = "Latitude: \(String(describing: location.coordinate?.latitude)), Longitude: \(String(describing: location.coordinate?.longitude))"
+            if let timestamp = item.itemTimestamp {
+                let date = Date(timeIntervalSince1970: timestamp)
+                dateLabel.text = dateFormatter.string(from: date)
+            }
         }
     }
 }

@@ -164,7 +164,7 @@ extension TableViewDataProviderTests {
     class MockItemCell: ItemCell {
         var caughtItem: ToDoItem?
 
-        override func configCell(withItem item: ToDoItem) {
+        override func configCell(withItem item: ToDoItem, checked: Bool = false) {
             caughtItem = item
         }
     }
