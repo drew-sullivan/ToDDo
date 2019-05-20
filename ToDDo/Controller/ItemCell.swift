@@ -9,5 +9,9 @@
 import UIKit
 
 class ItemCell: UITableViewCell {
-    
+
+
+    func configCell(withItem item: ToDoItem) {
+
+    }
 }
