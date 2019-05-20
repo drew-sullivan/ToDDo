@@ -16,6 +16,17 @@ class TableViewDataProvider: NSObject {
 
 extension TableViewDataProvider: UITableViewDelegate {
 
+    func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
+
+        guard let itemSection = Section(rawValue: indexPath.section) else { fatalError() }
+        switch itemSection {
+        case .toDo:
+            return "Check"
+        case .done:
+            return "Uncheck"
+        }
+    }
+
 }
 
 extension TableViewDataProvider: UITableViewDataSource {
@@ -55,6 +66,19 @@ extension TableViewDataProvider: UITableViewDataSource {
         cell.configCell(withItem: item)
         
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        guard let itemManager = itemManager, let section = Section(rawValue: indexPath.section) else { fatalError() }
+
+        switch section {
+        case .toDo:
+            itemManager.addCheckToItem(at: indexPath.row)
+        case .done:
+            itemManager.removeCheckFromItem(at: indexPath.row)
+        }
+
+        tableView.reloadData()
     }
 
 }

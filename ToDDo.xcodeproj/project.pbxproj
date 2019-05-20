@@ -22,6 +22,7 @@
 		C82EC0F3228F366E00DD73C6 /* TableViewDataProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82EC0F2228F366E00DD73C6 /* TableViewDataProviderTests.swift */; };
 		C82EC0F5228F368100DD73C6 /* TableViewDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82EC0F4228F368100DD73C6 /* TableViewDataProvider.swift */; };
 		C82EC0F72293179D00DD73C6 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82EC0F62293179D00DD73C6 /* ItemCell.swift */; };
+		C82EC0FA2293444700DD73C6 /* ItemCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82EC0F92293444700DD73C6 /* ItemCellTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		C82EC0F2228F366E00DD73C6 /* TableViewDataProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataProviderTests.swift; sourceTree = "<group>"; };
 		C82EC0F4228F368100DD73C6 /* TableViewDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataProvider.swift; sourceTree = "<group>"; };
 		C82EC0F62293179D00DD73C6 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		C82EC0F92293444700DD73C6 /* ItemCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCellTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				C82EC0EB228DF3B800DD73C6 /* Model */,
 				C82EC0EC228F31B500DD73C6 /* ItemListViewControllerTests.swift */,
 				C82EC0F2228F366E00DD73C6 /* TableViewDataProviderTests.swift */,
+				C82EC0F92293444700DD73C6 /* ItemCellTests.swift */,
 			);
 			path = ToDDoTests;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				C82EC0DE228DCDDE00DD73C6 /* ToDoItemTests.swift in Sources */,
 				C82EC0E6228DDBA100DD73C6 /* LocationTests.swift in Sources */,
 				C82EC0EA228DF39200DD73C6 /* ItemManagerTests.swift in Sources */,
+				C82EC0FA2293444700DD73C6 /* ItemCellTests.swift in Sources */,
 				C82EC0F3228F366E00DD73C6 /* TableViewDataProviderTests.swift in Sources */,
 				C82EC0ED228F31B500DD73C6 /* ItemListViewControllerTests.swift in Sources */,
 			);

@@ -35,6 +35,13 @@ class ItemManager {
         doneItems.append(todo)
     }
 
+    func removeCheckFromItem(at index: Int) {
+        var todo = doneItem(at: index)
+        todo.checked = false
+        doneItems.remove(at: index)
+        toDoItems.append(todo)
+    }
+
     func doneItem(at index: Int) -> ToDoItem {
         return doneItems[index]
     }

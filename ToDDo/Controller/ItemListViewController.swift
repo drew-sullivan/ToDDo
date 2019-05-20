@@ -23,10 +23,10 @@ class ItemListViewController: UIViewController {
         let tableViewHeight = self.view.frame.height
 
         tableView = UITableView(frame: CGRect(x: 0, y: rowHeight, width: tableViewWidth, height: tableViewHeight))
-        tableView?.register(ItemCell.self, forCellReuseIdentifier: "ItemCell")
-        tableView?.delegate = dataProvider
-        tableView?.dataSource = dataProvider
-        view.addSubview(tableView!)
+        tableView.register(ItemCell.self, forCellReuseIdentifier: "ItemCell")
+        tableView.delegate = dataProvider
+        tableView.dataSource = dataProvider
+        view.addSubview(tableView)
     }
 
 }
