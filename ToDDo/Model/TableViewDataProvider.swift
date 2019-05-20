@@ -25,11 +25,32 @@ extension TableViewDataProvider: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return itemManager?.toDoCount ?? 0
+        guard let itemManager = itemManager else { return 0 }
+
+        guard let itemSection = Section(rawValue: section) else { fatalError() }
+
+        let numRows: Int
+        switch itemSection {
+        case .toDo:
+            numRows = itemManager.toDoCount
+        case .done:
+            numRows = itemManager.doneCount
+        }
+        return numRows
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath)
+        return cell
+    }
+
+}
+
+extension TableViewDataProvider {
+
+    enum Section: Int {
+        case toDo
+        case done
     }
 
 }

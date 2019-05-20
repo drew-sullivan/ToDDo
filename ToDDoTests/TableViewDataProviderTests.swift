@@ -13,6 +13,7 @@ class TableViewDataProviderTests: XCTestCase {
 
     var sut: TableViewDataProvider!
     var tableView: UITableView!
+    var itemListViewController: ItemListViewController!
 
     override func setUp() {
         super.setUp()
@@ -20,7 +21,11 @@ class TableViewDataProviderTests: XCTestCase {
         sut = TableViewDataProvider()
         sut.itemManager = ItemManager()
 
-        tableView = UITableView()
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        itemListViewController = storyboard.instantiateViewController(withIdentifier: "ItemListViewController") as? ItemListViewController
+        itemListViewController.loadViewIfNeeded()
+
+        tableView = itemListViewController.tableView
         tableView.dataSource = sut
     }
 
@@ -43,11 +48,48 @@ class TableViewDataProviderTests: XCTestCase {
     }
 
     func test_numRows_inSection2_isDoneCount() {
-        XCTAssertEqual(tableView.numberOfRows(inSection: 1), 0)
         sut.itemManager?.addItem(ToDoItem(title: "Foo"))
-        tableView.reloadData()
+        sut.itemManager?.addItem(ToDoItem(title: "Bar"))
         sut.itemManager?.addCheckToItem(at: 0)
         XCTAssertEqual(tableView.numberOfRows(inSection: 1), 1)
+
+        sut.itemManager?.addCheckToItem(at: 0)
+        tableView.reloadData()
+
+        XCTAssertEqual(tableView.numberOfRows(inSection: 1), 2)
+    }
+
+    func test_cellForRow_ReturnCustomItemCell() {
+        sut.itemManager?.addItem(ToDoItem(title: "Foo"))
+        tableView.reloadData()
+
+        let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 0))
+        XCTAssertTrue(cell is ItemCell)
+    }
+
+    func test_cellForRow_dequesesCellFromTableView() {
+        let mockTableView = MockTableView()
+        mockTableView.dataSource = sut
+        mockTableView.register(ItemCell.self, forCellReuseIdentifier: "ItemCell")
+        sut.itemManager?.addItem(ToDoItem(title: "Foo"))
+        mockTableView.reloadData()
+
+        let _ = mockTableView.cellForRow(at: IndexPath(row: 0, section: 0))
+
+        XCTAssertTrue(mockTableView.cellWasDequeued)
+    }
+
+}
+
+extension TableViewDataProviderTests {
+
+    class MockTableView: UITableView {
+        var cellWasDequeued = false
+
+        override func dequeueReusableCell(withIdentifier identifier: String, for indexPath: IndexPath) -> UITableViewCell {
+            cellWasDequeued = true
+            return super.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
+        }
     }
 
 }
