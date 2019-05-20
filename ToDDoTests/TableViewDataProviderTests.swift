@@ -7,15 +7,47 @@
 //
 
 import XCTest
+@testable import ToDDo
 
 class TableViewDataProviderTests: XCTestCase {
 
+    var sut: TableViewDataProvider!
+    var tableView: UITableView!
+
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        super.setUp()
+
+        sut = TableViewDataProvider()
+        sut.itemManager = ItemManager()
+
+        tableView = UITableView()
+        tableView.dataSource = sut
     }
 
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        sut = nil
+
+        super.tearDown()
+    }
+
+    func test_numSections_isTwo() {
+        let numSections = tableView.numberOfSections
+        XCTAssertEqual(numSections, 2)
+    }
+
+    func test_numRows_inSection1_isToDoCount() {
+        XCTAssertEqual(tableView.numberOfRows(inSection: 0), 0)
+        sut.itemManager?.addItem(ToDoItem(title: "Foo"))
+        tableView.reloadData()
+        XCTAssertEqual(tableView.numberOfRows(inSection: 0), 1)
+    }
+
+    func test_numRows_inSection2_isDoneCount() {
+        XCTAssertEqual(tableView.numberOfRows(inSection: 1), 0)
+        sut.itemManager?.addItem(ToDoItem(title: "Foo"))
+        tableView.reloadData()
+        sut.itemManager?.addCheckToItem(at: 0)
+        XCTAssertEqual(tableView.numberOfRows(inSection: 1), 1)
     }
 
 }

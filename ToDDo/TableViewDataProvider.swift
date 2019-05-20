@@ -10,6 +10,8 @@ import UIKit
 
 class TableViewDataProvider: NSObject {
 
+    var itemManager: ItemManager?
+
 }
 
 extension TableViewDataProvider: UITableViewDelegate {
@@ -18,8 +20,12 @@ extension TableViewDataProvider: UITableViewDelegate {
 
 extension TableViewDataProvider: UITableViewDataSource {
 
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return itemManager?.toDoCount ?? 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
