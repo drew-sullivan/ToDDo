@@ -23,6 +23,9 @@
 		C82EC0F5228F368100DD73C6 /* TableViewDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82EC0F4228F368100DD73C6 /* TableViewDataProvider.swift */; };
 		C82EC0F72293179D00DD73C6 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82EC0F62293179D00DD73C6 /* ItemCell.swift */; };
 		C82EC0FA2293444700DD73C6 /* ItemCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82EC0F92293444700DD73C6 /* ItemCellTests.swift */; };
+		C82EC0FC2294609900DD73C6 /* DetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82EC0FB2294609900DD73C6 /* DetailViewControllerTests.swift */; };
+		C82EC0FE2294610400DD73C6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82EC0FD2294610400DD73C6 /* DetailViewController.swift */; };
+		C82EC1012294651A00DD73C6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C82EC1002294651A00DD73C6 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,9 @@
 		C82EC0F4228F368100DD73C6 /* TableViewDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataProvider.swift; sourceTree = "<group>"; };
 		C82EC0F62293179D00DD73C6 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		C82EC0F92293444700DD73C6 /* ItemCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCellTests.swift; sourceTree = "<group>"; };
+		C82EC0FB2294609900DD73C6 /* DetailViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllerTests.swift; sourceTree = "<group>"; };
+		C82EC0FD2294610400DD73C6 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		C82EC1002294651A00DD73C6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C82EC1012294651A00DD73C6 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +89,7 @@
 				C82EC0BC228DCBBE00DD73C6 /* ToDDo */,
 				C82EC0D1228DCBBF00DD73C6 /* ToDDoTests */,
 				C82EC0BB228DCBBE00DD73C6 /* Products */,
+				C82EC0FF2294651A00DD73C6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,6 +124,7 @@
 				C82EC0EC228F31B500DD73C6 /* ItemListViewControllerTests.swift */,
 				C82EC0F2228F366E00DD73C6 /* TableViewDataProviderTests.swift */,
 				C82EC0F92293444700DD73C6 /* ItemCellTests.swift */,
+				C82EC0FB2294609900DD73C6 /* DetailViewControllerTests.swift */,
 			);
 			path = ToDDoTests;
 			sourceTree = "<group>";
@@ -146,8 +155,17 @@
 			children = (
 				C82EC0EE228F321800DD73C6 /* ItemListViewController.swift */,
 				C82EC0F62293179D00DD73C6 /* ItemCell.swift */,
+				C82EC0FD2294610400DD73C6 /* DetailViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		C82EC0FF2294651A00DD73C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C82EC1002294651A00DD73C6 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +276,7 @@
 				C82EC0F72293179D00DD73C6 /* ItemCell.swift in Sources */,
 				C82EC0E1228DCE8D00DD73C6 /* ToDoItem.swift in Sources */,
 				C82EC0EF228F321800DD73C6 /* ItemListViewController.swift in Sources */,
+				C82EC0FE2294610400DD73C6 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +288,7 @@
 				C82EC0E6228DDBA100DD73C6 /* LocationTests.swift in Sources */,
 				C82EC0EA228DF39200DD73C6 /* ItemManagerTests.swift in Sources */,
 				C82EC0FA2293444700DD73C6 /* ItemCellTests.swift in Sources */,
+				C82EC0FC2294609900DD73C6 /* DetailViewControllerTests.swift in Sources */,
 				C82EC0F3228F366E00DD73C6 /* TableViewDataProviderTests.swift in Sources */,
 				C82EC0ED228F31B500DD73C6 /* ItemListViewControllerTests.swift in Sources */,
 			);
